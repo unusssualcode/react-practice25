@@ -5,8 +5,12 @@ function Profile({ user }) {
   const [age, setAge] = useState(user.age);
   return (
     <>
-      <UserCard name={user.name} age={age} city={user.city} />
-      <button onClick={() => setAge(age + 1)}>Age +</button>
+      <UserCard
+        name={user.name}
+        age={age}
+        city={user.city}
+        ageIncrease={() => setAge((prev) => prev + 1)}
+      />
     </>
   );
 }
