@@ -1,11 +1,16 @@
-function UserCard({ name, age, city = "Не указан", ageIncrease }) {
+function UserCard({
+  name,
+  age,
+  city = "Не указан",
+  avatar = "https://via.placeholder.com/150",
+}) {
   return (
-    <>
+    <div className="user-card">
       <p>Имя: {name}</p>
       <p>Возраст: {age}</p>
       <p>Город: {city}</p>
-      <button onClick={ageIncrease}>Age +</button>
-    </>
+      <img src={avatar} alt="" />
+    </div>
   );
 }
 
